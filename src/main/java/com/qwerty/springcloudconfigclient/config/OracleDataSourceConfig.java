@@ -21,7 +21,7 @@ public class OracleDataSourceConfig {
    //配置数据源
     @Bean(name = "oracleDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.oracle")
-//    @RefreshScope
+    @RefreshScope
 //    @primary这个注解是当spring容器中有两个相同的type（或是同时继承了某个父类）的bean，
 // 选出一个优先级最高的bean作为主要的
     @Primary
