@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping
 public class TestController {
+
+    @Value("${test}")
+    private String config;
+
     @RequestMapping("/test")
     public String test() throws Exception{
-        return "";
+        return config;
     }
 }
